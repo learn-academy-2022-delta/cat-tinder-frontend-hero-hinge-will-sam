@@ -21,6 +21,10 @@ class App extends Component {
     }
   }
 
+  createNewHero = (theNewHeroObject) => {
+    console.log(theNewHeroObject)
+  }
+
 
 
 
@@ -38,7 +42,10 @@ class App extends Component {
             let cat = this.state.cats.find(catObject => catObject.id === id)
             return <HeroShow cat={cat}/>
           }}  />
-          <Route path="/heronew" component={HeroNew}  />
+          <Route path="/heronew"
+                  render={() => {
+                    return < HeroNew createNewHero={ this.createNewHero } />
+                  }} />
           <Route path="/heroedit" component={HeroEdit}  />
           <Route component={NotFound}/>
         </Switch>  
