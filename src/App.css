@@ -1,8 +1,31 @@
+/* ---Header background--- */
+.banner-wrap {
+  position: relative;
+}
+
+.banner-wrap:before{ 
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 99px;
+  opacity: 0.6;
+  background-image: url(https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFydmVsJTIwY2hhcmFjdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1600&q=60);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner-image {
+  position: relative
+}
+/* ---HEROHINGE--- */
 .siteName{ 
   margin:0;
   text-transform: uppercase;
   font-weight: 550;
-  font-size: 60pt;
+  font-size: 45pt;
   letter-spacing: 3px;
   color: #4f0cb3;
   text-shadow: 5px 1px 0px #eddf3e,
@@ -12,13 +35,51 @@
 
 }
 
-.bannerimage{ 
+/* ---NavLinks--- */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  padding-right: 50px;
+
+}
+
+.navLink6{
+  margin:0;
+  font-weight: 700;
+  font-size: 13pt;
+  letter-spacing: 1px;
+  color: #4f0cb3;
+  text-shadow: 5px 1px 0px #eddf3e,
+                1px 1px 0 #eddf3e,
+                1px -1px 0 #eddf3e,
+                -1px -1px 0 #eddf3e;
+  
+}
+
+
+
+
+.bottomBanner-wrap {
+  position: relative;
+}
+
+.bottomBanner-wrap:before{ 
+  content: " ";
+  display: block;
+  position: relative;
+  left: 0;
+  top: 0;
   width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1618519764620-7403abdbdfe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFydmVsJTIwY2hhcmFjdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1600&q=60);
+  height: 50px;
   opacity: 0.6;
-  height: 109px;
-  background-color: black;
+  background-image: url(https://images.unsplash.com/photo-1611604548018-d56bbd85d681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFydmVsJTIwY2hhcmFjdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1600&q=60);
+  background-repeat: no-repeat;
   background-position: center;
+}
+
+.bottomBanner {
+  position: relative
 }
 
 .credits {
@@ -29,17 +90,6 @@
   text-align: center;
   bottom: 0;
   height: 30px;
-}
-
-
-.bottomBanner{ 
-  width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1611604548018-d56bbd85d681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bWFydmVsJTIwY2hhcmFjdGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1600&q=60);
-  opacity: 0.6;
-  height: 90px;
-  background-color: black;
-  background-position: center;
-  position: "fixed"
 }
 
 .notFoundPage{ 
@@ -59,5 +109,8 @@
 
 }
 
+.card{
+  position: center;
+}
 
 
