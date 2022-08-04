@@ -32,8 +32,12 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={Home}  />
-          <Route path="/heroindex" component={HeroIndex}  />
-          <Route path="/heroshow" component={HeroShow}  />
+          <Route path="/heroindex" render={() => <HeroIndex cats={this.state.cats}/>} />
+          <Route path="/heroshow/:id" render={(props) => {
+            let id = +props.match.params.id
+            let cat = this.state.cats.find(catObject => catObject.id === id)
+            return <HeroShow cat={cat}/>
+          }}  />
           <Route path="/heronew" component={HeroNew}  />
           <Route path="/heroedit" component={HeroEdit}  />
           <Route component={NotFound}/>

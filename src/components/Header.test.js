@@ -7,12 +7,11 @@ Enzyme.configure({adapter: new Adapter()})
 
 
 describe("When Header renders", () => {
-    it("displays an h1 with text", () => {
+    it("shows 3 NavItems", () => {
         const renderedHeader = shallow(<Header/>)
 
-        const headerTag = renderedHeader.find("h1")
-        const headerTagText = headerTag.text()
+        const headerNavItems = renderedHeader.find("NavItem")
 
-        expect(headerTagText).toEqual("HeroHinge")
+        expect(headerNavItems.length).toEqual(3)
     })
 })
