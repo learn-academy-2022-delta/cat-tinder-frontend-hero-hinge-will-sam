@@ -1,4 +1,5 @@
 /* ---Header background--- */
+
 .banner-wrap {
   position: relative;
 }
@@ -21,6 +22,7 @@
   position: relative
 }
 /* ---HEROHINGE--- */
+
 .siteName{ 
   margin:0;
   text-transform: uppercase;
@@ -58,7 +60,7 @@
 }
 
 
-
+/* ---Footer--- */
 
 .bottomBanner-wrap {
   position: relative;
@@ -92,6 +94,9 @@
   height: 30px;
 }
 
+
+/* ---NotFound--- */
+
 .notFoundPage{ 
   width: 100%;
   background-image: url(https://images.unsplash.com/photo-1608889175250-c3b0c1667d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YXZlbmdlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60);
@@ -113,4 +118,62 @@
   position: center;
 }
 
+/*---HomePage---*/
+
+.homePage{
+  background-image: url(/Users/learnacademy/Desktop/hhlogo2.png), url(https://media.giphy.com/media/PmFpJVVXjbZl4iRwWK/giphy.gif);
+  background-size: 43.5% auto, cover;
+  background-position: 46.5% 75%, center;
+  background-repeat: no-repeat, space;
+  background-attachment: scroll, scroll;
+  height: 100vh;
+  width: 100%
+}
+
+
+.indexPage{
+  background-image: url(/Users/learnacademy/Desktop/hhlogo2.png), url(https://media.giphy.com/media/PmFpJVVXjbZl4iRwWK/giphy.gif);
+  background-size: 88% auto, cover;
+  background-position: 50% 50%, center;
+  background-repeat: no-repeat, space;
+  background-attachment: scroll, scroll;
+  height: 100%;
+  width: 100%
+}
+
+
+/* ---NewHero--- */
+
+.newPage{
+  position: relative
+}
+
+.newPage{
+  background-image: url(https://images.unsplash.com/photo-1601645191163-3fc0d5d64e35?ixlib=rb-1.2.1&ixid=MnwxM[…]G90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-size: contain;
+  background-position: absolute;
+  background-repeat: round;
+  background-attachment: scroll;
+  opacity: .7;
+  height: 100vh;
+  width: 100%;
+}
+
+.newPage-image {
+  position: relative;
+}
+
+
+.label{
+  margin:0;
+  font-weight: 700;
+  font-size: 13pt;
+  letter-spacing: 1px;
+  color: #4f0cb3;
+  text-shadow: 5px 1px 0px #eddf3e,
+                1px 1px 0 #eddf3e,
+                1px -1px 0 #eddf3e,
+                -1px -1px 0 #eddf3e;
+  
+}
 

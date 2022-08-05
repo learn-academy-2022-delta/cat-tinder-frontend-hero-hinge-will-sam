@@ -8,6 +8,7 @@ class HeroIndex extends Component {
     render(){
         return (
             <>
+            <div className="indexPage">
                 <h2>Find a Love as powerful as you!</h2>
                 <div>
                     {this.props.cats && this.props.cats.map(cat => {
@@ -24,6 +25,7 @@ class HeroIndex extends Component {
                         )
                     })}
                 </div>
+            </div>    
             </>
         )
     }
