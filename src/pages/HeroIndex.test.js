@@ -7,7 +7,7 @@ Enzyme.configure({adapter: new Adapter()})
 
 describe("When the HeroIndex renders", () => {
     const props = {
-        cats:  [
+        heros:  [
             {
                 id: 1,
                 name: "Mittens",

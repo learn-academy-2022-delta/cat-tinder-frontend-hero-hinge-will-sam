@@ -6,7 +6,7 @@ Enzyme.configure({adapter: new Adapter()})
 
 
 describe("When the HeroShow renders", () => {
-    const cat = {
+    const hero = {
             id: 1,
             name: "Mittens",
             age: 5,
@@ -18,7 +18,7 @@ describe("When the HeroShow renders", () => {
     let renderedHeroShow;
 
     beforeEach(() => {
-        renderedHeroShow = shallow(<HeroShow cat={cat}/>);
+        renderedHeroShow = shallow(<HeroShow hero={hero}/>);
     });
     it("displays a profile for the hero", () => {
         const heroShowCard = renderedHeroShow.find("Card")

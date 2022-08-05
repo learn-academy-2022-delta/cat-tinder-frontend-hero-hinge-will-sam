@@ -7,28 +7,28 @@ class HeroEdit extends Component {
         super(props)
         this.state = {
             updatedHero: {
-                name: this.props.cat.name,
-                age: this.props.cat.age,
-                enjoys: this.props.cat.enjoys,
-                image: this.props.cat.image
+                name: this.props.hero.name,
+                age: this.props.hero.age,
+                enjoys: this.props.hero.enjoys,
+                image: this.props.hero.image
             },
             submitted: false
         }
     }
     
     handleChange = (e) => {
-        let { updatedCat } = this.state
-        updatedCat[e.target.name] = e.target.value
-        this.setState({ updatedCat: updatedCat })
+        let { updatedHero } = this.state
+        updatedHero[e.target.name] = e.target.value
+        this.setState({ updatedHero: updatedHero })
     }
 
     handleSubmit = (e) => {
-        this.props.updateCat(this.state.updatedCat, this.props.cat.id)
+        this.props.updateHero(this.state.updatedHero, this.props.hero.id)
         this.setState({ submitted: true })
     }
 
     render(){
-        console.log(this.state.updatedCat)
+        console.log(this.state.updatedHero)
         return (
             <>
                 <Form>
@@ -38,7 +38,7 @@ class HeroEdit extends Component {
                         type='text' 
                         name='name' 
                         onChange={ this.handleChange }
-                        value={ this.state.updatedCat.name }
+                        value={ this.state.updatedHero.name }
                     />
                 </FormGroup>
                 <FormGroup>
@@ -47,7 +47,7 @@ class HeroEdit extends Component {
                         type='text' 
                         name='age' 
                         onChange={ this.handleChange }
-                        value={ this.state.updatedCat.age }
+                        value={ this.state.updatedHero.age }
                     />
                 </FormGroup>
                 <FormGroup>
@@ -56,7 +56,7 @@ class HeroEdit extends Component {
                         type='text' 
                         name='enjoys' 
                         onChange={ this.handleChange }
-                        value={ this.state.updatedCat.enjoys }
+                        value={ this.state.updatedHero.enjoys }
                     />
                 </FormGroup>
                 <FormGroup>
@@ -65,7 +65,7 @@ class HeroEdit extends Component {
                         type='text' 
                         name='image'
                         onChange={ this.handleChange } 
-                        value={ this.state.updatedCat.image }
+                        value={ this.state.updatedHero.image }
                     />
                 </FormGroup>
                 <Button
@@ -73,7 +73,7 @@ class HeroEdit extends Component {
                     onClick={ this.handleSubmit }
                     >Submit Hero 
                 </Button>
-                { this.state.submitted && <Redirect to={`/heroshow/${this.props.cat.id}`}/> }
+                { this.state.submitted && <Redirect to={`/heroshow/${this.props.hero.id}`}/> }
             </Form>
             </>
         )

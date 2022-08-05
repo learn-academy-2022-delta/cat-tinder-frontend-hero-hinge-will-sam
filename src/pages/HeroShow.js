@@ -7,19 +7,19 @@ import { NavLink } from 'react-router-dom'
 class HeroShow extends Component {
     
     render(){
-        let { cat } = this.props
+        let { hero } = this.props
         return (
             <>
                 <Card>
-                    <CardImg top width="100%" src={cat.image} alt="Card image cap" />
+                    <CardImg top width="100%" src={hero.image} alt="Card image cap" />
                     <CardBody>
-                        <CardTitle>Hi, my name is {cat.name}</CardTitle>
-                        <CardSubtitle>{cat.age}</CardSubtitle>
-                        <CardText>{cat.enjoys}</CardText>
-                        <NavLink to={`/catedit/${this.props.cat.id}`}>
-                        <Button>Update Cat</Button>
+                        <CardTitle>Hi, my name is {hero.name}</CardTitle>
+                        <CardSubtitle>{hero.age}</CardSubtitle>
+                        <CardText>{hero.enjoys}</CardText>
+                        <NavLink to={`/heroedit/${this.props.hero.id}`}>
+                        <Button>Update Hero</Button>
                         </NavLink>
-                        <Button onClick={()=> this.props.deleteCat(cat.id)}>Delete Cat</Button>
+                        <Button onClick={()=> this.props.deleteHero(hero.id)}>Delete Hero</Button>
                     </CardBody>
                 </Card>
             </>
