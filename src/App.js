@@ -22,15 +22,21 @@ class App extends Component {
   }
 
   createNewHero = (theNewHeroObject) => {
-    console.log(theNewHeroObject)
+    console.log(theNewHeroObject);
+  }
+
+  updateCat = (cat, id) => {
+    console.log("cat:", cat)
+    console.log("id", id)
+  }
+
+  deleteCat = (id) => {
+    console.log("deleted", id)
   }
 
 
-
-
-
   render(){
-
+    console.log('appjs state: ', this.state)
     return (
       <Router>
         <Header />
@@ -40,13 +46,27 @@ class App extends Component {
           <Route path="/heroshow/:id" render={(props) => {
             let id = +props.match.params.id
             let cat = this.state.cats.find(catObject => catObject.id === id)
-            return <HeroShow cat={cat}/>
-          }}  />
+            return(
+              <HeroShow 
+                cat={cat}
+                deleteCat={this.deleteCat}
+              />
+            )
+          }} />
           <Route path="/heronew"
                   render={() => {
                     return < HeroNew createNewHero={ this.createNewHero } />
                   }} />
-          <Route path="/heroedit" component={HeroEdit}  />
+          <Route path="/heroedit/:id" render={(props) =>{
+            let id = +props.match.params.id
+            let cat = this.state.cats.find(catObject => catObject.id === id)
+            return(
+            <HeroEdit 
+            cat={cat}
+            updatedCat={this.updatedCat}
+            />
+            )
+          }} />
           <Route component={NotFound}/>
         </Switch>  
         <div style ={{

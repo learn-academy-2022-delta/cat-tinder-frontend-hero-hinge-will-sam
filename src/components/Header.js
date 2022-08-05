@@ -15,12 +15,12 @@ class Header extends Component {
                         </NavItem>
                         <NavItem>
                             <NavLink to="/heroindex" className= "nav-link">
-                                <h6 className="navLink6">Meet the Heroes</h6>
+                                <h6 className="navLink6">Meet Heroes</h6>
                             </NavLink>
                         </NavItem>
                         <NavItem>
                             <NavLink to="/heronew" className= "nav-link">
-                                <h6 className="navLink6">Add a Hero Profile</h6>
+                                <h6 className="navLink6">Add Hero Profile</h6>
                             </NavLink>
                         </NavItem>
                     </Nav>
