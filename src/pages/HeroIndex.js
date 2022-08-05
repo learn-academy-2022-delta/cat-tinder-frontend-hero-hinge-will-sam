@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 
     
 class HeroIndex extends Component {
@@ -10,15 +11,17 @@ class HeroIndex extends Component {
             <>
                 <h2>Find a Love as powerful as you!</h2>
                 <div>
-                    {this.props.cats && this.props.cats.map(cat => {
+                    {this.props.heros && this.props.heros.map(hero => {
                         return(
-                            <Card style={{ width: '47rem' }}
-                                key={cat.id} className="card">
-                                <CardImg top width="100%" src={cat.image} alt="Card image cap" />
+                            <Card style={{ width: '25rem' }}
+                                key={hero.id} className="card">
+                                <CardImg top width="100%" src={hero.image} alt="Card image cap" />
                                 <CardBody>
-                                    <CardTitle>{cat.name}</CardTitle>
-                                    <CardSubtitle>{cat.age}</CardSubtitle>
-                                    <Button>More info here</Button>
+                                    <CardTitle>{hero.name}</CardTitle>
+                                    <CardSubtitle>{hero.age}</CardSubtitle>
+                                    <NavLink to={`/heroshow/${hero.id}`}>
+                                        <Button>More info here</Button>
+                                    </NavLink>
                                 </CardBody>
                             </Card>
                         )
