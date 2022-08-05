@@ -9,6 +9,7 @@ class HeroIndex extends Component {
     render(){
         return (
             <>
+            <div className="indexPage">
                 <h2>Find a Love as powerful as you!</h2>
                 <div>
                     {this.props.heros && this.props.heros.map(hero => {
@@ -27,6 +28,7 @@ class HeroIndex extends Component {
                         )
                     })}
                 </div>
+            </div>    
             </>
         )
     }

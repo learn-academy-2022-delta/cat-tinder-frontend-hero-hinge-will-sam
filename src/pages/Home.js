@@ -3,8 +3,8 @@ class Home extends Component {
     
     render(){
         return (
-            <div>
-                Home
+            <div className="homePage">
+                <div className="logo"></div>
             </div>
         )
     }

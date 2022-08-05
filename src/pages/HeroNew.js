@@ -31,9 +31,11 @@ class HeroNew extends Component {
     
     render(){
         return (
+            <div className="newPage">
+            <div className="newPage-image">
             <Form>
                 <FormGroup>
-                    <Label for='name'> Name </Label>
+                    <Label for='name' className="label"> Name </Label>
                     <Input 
                         type='text' 
                         name='name' 
@@ -41,7 +43,7 @@ class HeroNew extends Component {
                     />
                 </FormGroup>
                 <FormGroup>
-                    <Label for='age'> Age </Label>
+                    <Label for='age' className="label"> Age </Label>
                     <Input 
                         type='text' 
                         name='age' 
@@ -49,7 +51,7 @@ class HeroNew extends Component {
                     />
                 </FormGroup>
                 <FormGroup>
-                    <Label for='enjoys'> Enjoys </Label>
+                    <Label for='enjoys' className="label"> Enjoys </Label>
                     <Input 
                         type='text' 
                         name='enjoys' 
@@ -57,7 +59,7 @@ class HeroNew extends Component {
                     />
                 </FormGroup>
                 <FormGroup>
-                    <Label for='image'> Image </Label>
+                    <Label for='image' className="label"> Image </Label>
                     <Input 
                         type='text' 
                         name='image'
@@ -70,6 +72,8 @@ class HeroNew extends Component {
                 </Button>
                 { this.state.submitted && <Redirect to='/heroindex'/> }
             </Form>
+            </div>
+            </div>
         )
     }
 }
