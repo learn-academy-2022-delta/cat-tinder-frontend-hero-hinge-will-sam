@@ -17,21 +17,57 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      heros: heros
+      heros: []
     }
   }
 
+componentDidMount() {
+  this.readHero()
+}
+
+readHero = () => {
+  fetch("http://localhost:3000/heros")
+  .then(response => response.json())
+  .then(payload => this.setState({heros: payload}))
+  .catch(errors => console.log("Hero read errors: ", errors))
+}
+
   createNewHero = (theNewHeroObject) => {
-    console.log(theNewHeroObject);
+    fetch("http://localhost:3000/heros", {
+      body: JSON.stringify(theNewHeroObject),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"POST"
+    })
+  .then(response => response.json())
+  .then(() => this.readHero())
+  .catch(errors => console.log("Hero read errors: ", errors))
   }
 
   updateHero = (hero, id) => {
-    console.log("hero:", hero)
-    console.log("id", id)
+    fetch(`http://localhost:3000/heros/${id}`, {
+      body: JSON.stringify(hero),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"PATCH"
+    })
+  .then(response => response.json())
+  .then(() => this.readHero())
+  .catch(errors => console.log("Hero update errors: ", errors))
   }
 
   deleteHero = (id) => {
-    console.log("deleted", id)
+    fetch(`http://localhost:3000/heros/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method:"DELETE"
+    })
+  .then(response => response.json())
+  .then(() => this.readHero())
+  .catch(errors => console.log("Hero delete errors: ", errors))
   }
 
 
