@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button } from 'reactstrap'
+    CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
     
@@ -11,22 +11,26 @@ class HeroIndex extends Component {
             <>
             <div className="indexPage">
                 <h2>Find a Love as powerful as you!</h2>
-                <div>
+                <div >
+                    <Row>
                     {this.props.heros && this.props.heros.map(hero => {
                         return(
-                            <Card style={{ width: '25rem' }}
-                                key={hero.id} className="card">
-                                <CardImg top width="100%" src={hero.image} alt="Card image cap" />
+                            <Col sm="4">
+                                <Card style={{ width: '15rem' }}
+                                key={hero.id} >
+                                    <CardImg top width="100%" src={hero.image} alt="Card image cap" />
                                 <CardBody>
                                     <CardTitle>{hero.name}</CardTitle>
                                     <CardSubtitle>{hero.age}</CardSubtitle>
                                     <NavLink to={`/heroshow/${hero.id}`}>
                                         <Button>More info here</Button>
                                     </NavLink>
-                                </CardBody>
-                            </Card>
+                                    </CardBody>
+                                </Card>
+                            </Col>
                         )
                     })}
+                    </Row>
                 </div>
             </div>    
             </>

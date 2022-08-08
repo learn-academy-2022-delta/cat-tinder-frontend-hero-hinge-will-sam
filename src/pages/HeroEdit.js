@@ -22,7 +22,7 @@ class HeroEdit extends Component {
         this.setState({ updatedHero: updatedHero })
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = () => {
         this.props.updateHero(this.state.updatedHero, this.props.hero.id)
         this.setState({ submitted: true })
     }

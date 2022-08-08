@@ -64,6 +64,7 @@
 
 /* ---Footer--- */
 
+
 .bottomBanner-wrap {
   position: relative;
 }
@@ -117,13 +118,16 @@
 }
 
 /* .card{
-  position:
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center; 
 } */
 
 /*---HomePage---*/
 
 .homePage{
-  background-image: url(/Users/learnacademy/Desktop/hhlogo2.png), url(https://media.giphy.com/media/PmFpJVVXjbZl4iRwWK/giphy.gif);
+  background-image: url(https://i.postimg.cc/vT2zg8MX/Logo-Makr-8w-RWFj-1.png), url(https://media.giphy.com/media/PmFpJVVXjbZl4iRwWK/giphy.gif);
   background-size: 43.5% auto, cover;
   background-position: 46.5% 75%, center;
   background-repeat: no-repeat, space;
@@ -134,7 +138,7 @@
 
 
 .indexPage{
-  background-image: url(/Users/learnacademy/Desktop/hhlogo2.png), url(https://media.giphy.com/media/PmFpJVVXjbZl4iRwWK/giphy.gif);
+  background-image: url(https://i.postimg.cc/vT2zg8MX/Logo-Makr-8w-RWFj-1.png), url(https://media.giphy.com/media/PmFpJVVXjbZl4iRwWK/giphy.gif);
   background-size: 88% auto, cover;
   background-position: 50% 50%, center;
   background-repeat: no-repeat, space;
