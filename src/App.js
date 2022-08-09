@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './App.css'
-import heros from './mockHeros'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -20,29 +19,29 @@ class App extends Component {
       heros: []
     }
   }
+  
+  componentDidMount() {
+    this.readHero()
+  }
 
-componentDidMount() {
-  this.readHero()
-}
-
-readHero = () => {
-  fetch("http://localhost:3000/heros")
-  .then(response => response.json())
-  .then(payload => this.setState({heros: payload}))
-  .catch(errors => console.log("Hero read errors: ", errors))
-}
+  readHero = () => {
+    fetch("http://localhost:3000/heros")
+    .then(response => response.json())
+    .then(payload => this.setState({heros: payload}))
+    .catch(errors => console.log("Hero read errors: ", errors))
+  }
 
   createNewHero = (theNewHeroObject) => {
     fetch("http://localhost:3000/heros", {
       body: JSON.stringify(theNewHeroObject),
       headers: {
-        "Content-Type": "application/json"
+       "Content-Type": "application/json"
       },
       method:"POST"
     })
-  .then(response => response.json())
-  .then(() => this.readHero())
-  .catch(errors => console.log("Hero read errors: ", errors))
+    .then(response => response.json())
+    .then(() => this.readHero())
+    .catch(errors => console.log("Hero read errors: ", errors))
   }
 
   updateHero = (hero, id) => {
@@ -98,8 +97,8 @@ readHero = () => {
             let hero = this.state.heros.find(heroObject => heroObject.id === id)
             return(
             <HeroEdit 
-            hero={hero}
-            updatedHero={this.updatedHero}
+              hero={hero}
+              updateHero={this.updateHero}
             />
             )
           }} />
